@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Stick
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Claw
+    uniqueID: 1004618595
+    locked: 0
+  - name: Stick
+    uniqueID: 745384149
     locked: 0
