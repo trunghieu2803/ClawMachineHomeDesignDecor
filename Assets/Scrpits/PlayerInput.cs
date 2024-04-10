@@ -39,6 +39,9 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             _checkClickStick = false;
+            Quaternion q = _poly.gameObject.transform.rotation;
+            q.eulerAngles = Vector3.zero;
+            _poly.gameObject.transform.rotation = q;
             _moveMent = Vector2.zero;
         }
     }

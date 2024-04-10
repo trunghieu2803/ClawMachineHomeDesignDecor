@@ -6,9 +6,6 @@ using UnityEngine;
 public class Stick : MonoBehaviour
 {
     public PlayerInput _playerInput;
-
-    
-    public bool _checkClickStick { get; private set;}
     [SerializeField] int maxAngle;
 
     private void Awake()
