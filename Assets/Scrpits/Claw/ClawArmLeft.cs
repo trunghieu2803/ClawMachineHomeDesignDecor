@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class ClawArmLeft : MonoBehaviour
 {
-    [SerializeField] float clawOpenAngle = 35f;
     ClawArm _clawArm;
     private void Awake()
     {
         _clawArm = GetComponentInParent<ClawArm>();
     }
-
     private void Start()
     {
         _clawArm.OnOpenClawtArm += OpenLeftClaw;
@@ -19,7 +17,7 @@ public class ClawArmLeft : MonoBehaviour
 
     public void OpenLeftClaw()
     {
-        if (361 - this.transform.eulerAngles.z <= clawOpenAngle)
+        if (this.transform.eulerAngles.z >= 326)
         {
             this.transform.Rotate(0, 0, -1);
         }
@@ -27,7 +25,7 @@ public class ClawArmLeft : MonoBehaviour
 
     public void CloseLeftClaw()
     {
-        if (360 - this.transform.eulerAngles.z > 1)
+        if (this.transform.eulerAngles.z < 358)
         {
             this.transform.Rotate(0, 0, 1);
         }

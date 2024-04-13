@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ClawArmRight : MonoBehaviour
 {
-    [SerializeField] int clawOpenAngle = 35;
     ClawArm _clawArm;
     private void Awake()
     {
@@ -18,7 +17,7 @@ public class ClawArmRight : MonoBehaviour
     }
     public void OpenRightClaw()
     {
-        if (this.transform.eulerAngles.z <= clawOpenAngle)
+        if (this.transform.eulerAngles.z < 35)
         {
             this.transform.Rotate(0, 0, 1);
         }
@@ -26,7 +25,7 @@ public class ClawArmRight : MonoBehaviour
     
     public void CloseRightClaw()
     {
-        if (this.transform.eulerAngles.z - 1 > 0)
+        if (this.transform.eulerAngles.z > 2)
         {
             this.transform.Rotate(0, 0, -1);
         }
